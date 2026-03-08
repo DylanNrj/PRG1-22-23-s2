@@ -4,28 +4,31 @@ Colección de ejercicios y retos de Programación I, organizados con el estánda
 
 ## Navegación
 
-- Código fuente: `src/`
+- Código fuente: `src/<reto>/`
 - Modelos UML: `modelosUML/`
 - Documentación: `docs/`
 - Imágenes: `images/`
 
 ## Retos incluidos
 
-### Reto ForIf (Reto1.java - Reto21.java)
+### Reto ForIf (`src/retoForIf/`)
 Ejercicios básicos de bucles y condicionales. Cada archivo contiene un programa independiente.
 
 - **Reto1-21**: Ejercicios de bucles FOR e IF en orden progresivo
 - **Reto19var**: Variación alternativa del Reto 19
 - Ejecución: `java RetoN` (donde N es el número del reto)
 
-### Reto CCCF (RetoCCCF.java)
+### Reto ASCII (`src/retoASCII/`)
+Ejercicios introductorios de impresión y patrones en consola.
+
+### Reto CCCF (`src/retoCCCF/`)
 Simulación de colas en supermercado (4 cajas).
 
 - **RetoCCCF.java**: Implementación principal
 - **RetoCCCFvar.java**: Variación alternativa
 - Ejecución: `java RetoCCCF`
 
-### Reto Vampiro (laberintoVampiro.java)
+### Reto Vampiro (`src/retoVampiro/`)
 Ejercicio de programación orientada a objetos con laberintos temáticos.
 
 - **laberintoVampiro.java**: Versión vampiro
@@ -34,33 +37,40 @@ Ejercicio de programación orientada a objetos con laberintos temáticos.
 - **laberintoAntorcha.java**: Variación con antorcha
 - Ejecución: `java laberintoVampiro` (u otra variación)
 
-### Reto Pacman (pacman.java)
+### Reto Pacman (`src/RetoPacman/`)
 Implementación de juego tipo Pacman.
 
 - Ejecución: `java pacman`
 
-### Reto Aulas (ReservaAulas.java)
+### Reto Aulas (`src/RetoAulas/`)
 Sistema de reserva de aulas.
 
 - Ejecución: `java ReservaAulas`
 
-### Reto El Caracol (RetoElCaracol.java)
+### Reto El Caracol (`src/RetoElCaracol/`)
 Ejercicio lógico de caracoles.
 
 - Ejecución: `java RetoElCaracol`
 
 ## Ejecución
 
-Desde `entregas/dylanNaranjo/src`:
+Ejemplos desde cada carpeta de reto:
 
 ```bash
+cd src/retoForIf
 javac *.java
-java RetoN              # Para cualquier reto ForIf
-java RetoCCCF          # Para simular supermercado
-java laberintoVampiro  # Para reto vampiro
+java Reto1
+
+cd ../retoCCCF
+javac *.java
+java RetoCCCF
+
+cd ../retoVampiro
+javac *.java
+java laberintoVampiro
 ```
 
 ## Notas
 
-- Todos los archivos Java están compilados en un mismo directorio para facilitar la ejecución independiente de cada reto.
-- Algunos retos pueden tener clases main duplicadas con el mismo nombre; se pueden ejecutar compilando individualmente si es necesario.
+- Cada reto mantiene sus archivos en su propia carpeta dentro de `src/`.
+- Esta estructura evita conflictos entre clases con nombres repetidos en retos distintos.

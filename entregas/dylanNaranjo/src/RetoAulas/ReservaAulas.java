@@ -1,9 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Sistema de reserva de aulas para profesores.
- * Gestiona el estado de disponibilidad y permite reservar/liberar aulas.
- */
 public class ReservaAulas {
 
     private static final int OPCION_RESERVAR = 1;
@@ -70,11 +66,6 @@ public class ReservaAulas {
         } while (opcion != OPCION_SALIR);
     }
 
-    /**
-     * Muestra el estado actual de todas las aulas (Libre/Ocupada).
-     * 
-     * @param aulas Array booleano donde true=libre, false=ocupada
-     */
     public static void mostrarEstadoAulas(boolean[] aulas) {
         System.out.println("Estado de las aulas:");
         for (int i = 0; i < aulas.length; i++) {
@@ -84,12 +75,6 @@ public class ReservaAulas {
         System.out.println();
     }
 
-    /**
-     * Reserva la primera aula disponible encontrada.
-     * 
-     * @param aulas Array de estado de aulas
-     * @return Índice del aula reservada, o -1 si no hay aulas disponibles
-     */
     public static int reservarAula(boolean[] aulas) {
         for (int i = 0; i < aulas.length; i++) {
             if (aulas[i]) {
@@ -100,13 +85,6 @@ public class ReservaAulas {
         return AULA_NO_DISPONIBLE;
     }
 
-    /**
-     * Libera un aula específica si estaba ocupada.
-     * 
-     * @param aulas Array de estado de aulas
-     * @param numeroAula Número de aula (1-based) a liberar
-     * @return true si se liberó correctamente, false si ya estaba libre o número inválido
-     */
     public static boolean liberarAula(boolean[] aulas, int numeroAula) {
         if (numeroAula >= 1 && numeroAula <= aulas.length) {
             if (!aulas[numeroAula - 1]) {

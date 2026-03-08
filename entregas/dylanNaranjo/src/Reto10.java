@@ -1,6 +1,5 @@
-package entregas;
+public class Reto10 {
 
-class retoForIf {
     public static void main(String[] args) {
         int dimension;
         dimension = 21;
@@ -9,7 +8,9 @@ class retoForIf {
             for (int i = 1; i <= dimension; i = i + 1) {
 
                 if (
-                    i == j + 1 || i + 1 == j
+                // El código desde aqui
+                i == +i 
+                // El código hasta aquí
                 ) {
                     System.out.print("(*)");
                 } else {
@@ -19,4 +20,5 @@ class retoForIf {
             System.out.println();
         }
     }
+
 }
